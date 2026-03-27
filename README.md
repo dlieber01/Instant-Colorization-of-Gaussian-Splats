@@ -1,0 +1,1 @@
+# Instant-Colorization-of-Gaussian-Splats
