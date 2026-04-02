@@ -8,19 +8,48 @@ Abstract: *Gaussian Splatting has recently become one of the most popular framew
 TODO: 1: GIF, Video oder Bilder zur Veranschaulichung
       2: Beispiel commands für alle möglichen Ausführungen
 
-# Installation Guide
+<div style="display: flex; justify-content: center; padding:10px;">
+  <video id="myVideo" width="700" controls autoplay loop muted style="background:white; padding:5px;">
+  <source src="asssets/instant_colorization_gaussian_splats_video.mp4" type="video/mp4">
+</video>
+</div>
 
+<script>
+  const video = document.getElementById("myVideo");
+
+  video.addEventListener("click", () => {
+    if (video.requestFullscreen) {
+      video.requestFullscreen();
+    }
+  });
+</script>
+
+<div style="display:flex; gap:10px; align-items:flex-start; flex-wrap:wrap;">
+
+
+  <div style="flex:1 1 48%; min-width:300px;">
+    <img src="asssets/architecture_overview.png" style="width:100%; background-color:white; padding:5px; box-sizing:border-box;">
+  </div>
+
+  <div style="flex:1 1 48%; min-width:300px; display:flex; flex-direction:column; gap:10px;">
+    <img src="asssets/relighting.png" style="width:100%; background-color:white; padding:5px; box-sizing:border-box;">
+    <img src="asssets/comparison.png" style="width:100%; background-color:white; padding:5px; box-sizing:border-box;">
+  </div>
+
+</div>
+
+# Installation Guide
 ### Cloning the Repository
 
 The repository contains submodules, thus please check it out with 
 ```shell
 # SSH
-git clone git@github.com:dlieber01/Instant-Colorization-of-Gaussian-Splats.git  --recursive
+git clone  --recursive
 ```
 or
 ```shell
 # HTTPS
-git clone https://github.com/dlieber01/Instant-Colorization-of-Gaussian-Splats.git  --recursive
+git clone  --recursive
 ```
 
 This project builds on 3D Gaussian Splatting for Real-Time Radiance Field Rendering. [here](https://github.com/graphdeco-inria/gaussian-splatting)
@@ -94,8 +123,92 @@ python colorize_instant.py --scene_path <path to folder containing point cloud>
 </details>
 <br>
 
+
+
 <details>
 <summary><span style="font-weight: bold;">Example Commands</span></summary>
+
+  #### 1. Default Usage (Automatic Source Path)
+  Runs colorization using the default settings. The source path is inferred automatically from the scene name.
+
+  ```shell
+  python colorize_instant.py \
+  --scene_path output/horns \
+  --iteration 30000
+  ```
+
+  #### 2. Custom Source Path
+  Use this when the dataset directory does not match the scene folder name.
+
+  ```shell
+  python colorize_instant.py \
+  --scene_path output/horns_experiment \
+  --source_path data/horns \
+  --iteration 30000
+  ```
+
+  #### 3. Segmentation Mode
+  Uses only the DC component (no view-dependent effects). Suitable for segmentation masks.
+
+  ```shell
+  python colorize_instant.py \
+  --scene_path output/scene_seg \
+  --iteration 30000 \
+  --sh_degree 0
+  ```
+
+  #### 4. Adam Optimization
+  Optimizes colors using the adam optimizer.
+
+  ```shell
+  python colorize_instant.py \
+  --scene_path output/horns \
+  --iteration 30000 \
+  --color_opt adam \
+  --refinement_steps 0
+  ```
+
+  #### 5. Instant Solver with Refinement
+  Runs the fast closed-form solver followed by additional refinement iterations.
+  By default, **50 refinement steps** are performed unless specified otherwise.
+
+  ```shell
+  python colorize_instant.py \
+  --scene_path output/horns \
+  --iteration 30000 \
+  --color_opt instant \
+  --refinement_steps 100
+  ```
+
+  #### 6. Multi-Lighting Setup
+  Select a specific lighting condition for datasets containing multiple lighting setups.
+
+  ```shell
+  python colorize_instant.py \
+  --scene_path output/scene5_all \
+  --iteration 30000 \
+  --lighting_index 2
+  ```
+
+  #### 8. Logging and Evaluation Metrics
+  Stores loss history and evaluation metrics (L1, L2, SSIM, PSNR).
+
+  ```shell
+  python colorize_instant.py \
+  --scene_path output/horns \
+  --iteration 30000 \
+  --save_loss True
+  ```
+
+  #### 9. Custom Output File
+  Stores loss history and evaluation metrics (L1, L2, SSIM, PSNR).
+
+  ```shell
+  python colorize_instant.py \
+  --scene_path output/horns \
+  --iteration 30000 \
+  --output_file output/horns/colored_result.ply
+  ```
 
 </details>
 <br>
@@ -113,6 +226,8 @@ python mask_ply.py --source_file <original point cloud> --mask_file <point cloud
 
 </details>
 <br>
+
+<img src="asssets/segmentation.png" width="700">
 
 ## Processing your own Scenes
 

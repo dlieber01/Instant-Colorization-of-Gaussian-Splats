@@ -847,5 +847,5 @@ if __name__ == "__main__":
         args.save_loss,
         args.plot_images,
         args.lighting_index,
-        args.output_path,
+        args.output_file,
     )
