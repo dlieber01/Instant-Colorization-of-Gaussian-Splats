@@ -10,7 +10,7 @@ TODO: 1: GIF, Video oder Bilder zur Veranschaulichung
 
 <div style="display: flex; justify-content: center; padding:10px;">
   <video id="myVideo" width="700" controls autoplay loop muted style="background:white; padding:5px;">
-  <source src="asssets/instant_colorization_gaussian_splats_video.mp4" type="video/mp4">
+  <source src="assets/instant_colorization_gaussian_splats_video.mp4" type="video/mp4">
 </video>
 </div>
 
@@ -28,12 +28,12 @@ TODO: 1: GIF, Video oder Bilder zur Veranschaulichung
 
 
   <div style="flex:1 1 48%; min-width:300px;">
-    <img src="asssets/architecture_overview.png" style="width:100%; background-color:white; padding:5px; box-sizing:border-box;">
+    <img src="assets/architecture_overview.png" style="width:100%; background-color:white; padding:5px; box-sizing:border-box;">
   </div>
 
   <div style="flex:1 1 48%; min-width:300px; display:flex; flex-direction:column; gap:10px;">
-    <img src="asssets/relighting.png" style="width:100%; background-color:white; padding:5px; box-sizing:border-box;">
-    <img src="asssets/comparison.png" style="width:100%; background-color:white; padding:5px; box-sizing:border-box;">
+    <img src="assets/relighting.png" style="width:100%; background-color:white; padding:5px; box-sizing:border-box;">
+    <img src="assets/comparison.png" style="width:100%; background-color:white; padding:5px; box-sizing:border-box;">
   </div>
 
 </div>
@@ -227,7 +227,7 @@ python mask_ply.py --source_file <original point cloud> --mask_file <point cloud
 </details>
 <br>
 
-<img src="asssets/segmentation.png" width="700">
+<img src="assets/segmentation.png" width="700">
 
 ## Processing your own Scenes
 
