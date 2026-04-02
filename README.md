@@ -5,16 +5,8 @@ This repository contains the official authors implementation associated with the
 
 Abstract: *Gaussian Splatting has recently become one of the most popular frameworks for photorealistic 3D scene reconstruction and rendering. While current rasterizers allow for efficient mappings of 3D Gaussian splats onto 2D camera views, this work focuses on mapping 2D image information (e.g. color, neural features or segmentation masks) efficiently back onto an existing scene of Gaussian splats. This 'opposite' direction enables applications ranging from scene relighting and stylization to 3D semantic segmentation, but also introduces challenges, such as view-dependent colorization and occlusion handling. Our approach tackles these challenges using the normal equation to solve a visibility-weighted least squares problem for every Gaussian and can be implemented efficiently with existing differentiable rasterizers. We demonstrate the effectiveness of our approach on scene relighting, feature enrichment and 3D semantic segmentation tasks, achieving up to an order of magnitude speedup compared to gradient descent-based baselines.*
 
-TODO: 1: GIF, Video oder Bilder zur Veranschaulichung
-      2: Beispiel commands für alle möglichen Ausführungen
-
-<div style="display: flex; justify-content: center; padding:10px;">
-  <video width="700" controls autoplay loop muted style="background:white; padding:5px;">
-  <source src="assets/instant_colorization_gaussian_splats_video.mp4" type="video/mp4">
-</video>
-</div>
-
-
+### Click to watch the video
+[![Watch the video](assets/video_preview.png)](assets/instant_colorization_gaussian_splats_video.mp4)
 
 <div style="display:flex; gap:10px; align-items:flex-start; flex-wrap:wrap;">
 
