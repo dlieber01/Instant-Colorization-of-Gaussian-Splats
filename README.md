@@ -9,20 +9,12 @@ TODO: 1: GIF, Video oder Bilder zur Veranschaulichung
       2: Beispiel commands für alle möglichen Ausführungen
 
 <div style="display: flex; justify-content: center; padding:10px;">
-  <video id="myVideo" width="700" controls autoplay loop muted style="background:white; padding:5px;">
+  <video width="700" controls autoplay loop muted style="background:white; padding:5px;">
   <source src="assets/instant_colorization_gaussian_splats_video.mp4" type="video/mp4">
 </video>
 </div>
 
-<script>
-  const video = document.getElementById("myVideo");
 
-  video.addEventListener("click", () => {
-    if (video.requestFullscreen) {
-      video.requestFullscreen();
-    }
-  });
-</script>
 
 <div style="display:flex; gap:10px; align-items:flex-start; flex-wrap:wrap;">
 
