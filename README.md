@@ -9,8 +9,6 @@ Abstract: *Gaussian Splatting has recently become one of the most popular framew
   <img src="assets/icgs_gif.gif" width="700">
 </div>
 
-[![Watch the video](assets/video_preview.png)](assets/instant_colorization_gaussian_splats_video.mp4)
-
 <div style="display:flex; gap:10px; align-items:flex-start; flex-wrap:wrap;">
 
   <div style="flex:1 1 48%; min-width:300px;">
