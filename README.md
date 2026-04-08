@@ -7,6 +7,12 @@ Daniel Lieber, Nils Wandel, Alexander Mock
 
 Abstract: *Gaussian Splatting has recently become one of the most popular frameworks for photorealistic 3D scene reconstruction and rendering. While current rasterizers allow for efficient mappings of 3D Gaussian splats onto 2D camera views, this work focuses on mapping 2D image information (e.g. color, neural features or segmentation masks) efficiently back onto an existing scene of Gaussian splats. This 'opposite' direction enables applications ranging from scene relighting and stylization to 3D semantic segmentation, but also introduces challenges, such as view-dependent colorization and occlusion handling. Our approach tackles these challenges using the normal equation to solve a visibility-weighted least squares problem for every Gaussian and can be implemented efficiently with existing differentiable rasterizers. We demonstrate the effectiveness of our approach on scene relighting, feature enrichment and 3D semantic segmentation tasks, achieving up to an order of magnitude speedup compared to gradient descent-based baselines.*
 
+## Datasets
+
+The datasets used in this project can be downloaded here:
+
+[Google Drive – Dataset Collection](https://drive.google.com/drive/folders/1qOJFKlcO29HbHSO-YhMeGaHo8T8otLPH?usp=drive_link)
+
 
 <div style="display:flex; gap:10px; align-items:flex-start; flex-wrap:wrap;">
 
