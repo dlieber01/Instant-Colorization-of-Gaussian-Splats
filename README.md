@@ -254,10 +254,15 @@ Following dataset structure in the source path location:
     <h2 class="title">BibTeX</h2>
     If you find this project helpful for your research, please consider citing the report
     <pre><code>,
-      author       = {},
-      title        = {Instant Colorization of Gaussian Splats},
-      year         = {2026},
-      url          = {}
+      @misc{lieber2026instantcolorizationgaussiansplats,
+        title={Instant Colorization of Gaussian Splats}, 
+        author={Daniel Lieber and Alexander Mock and Nils Wandel},
+        year={2026},
+        eprint={2604.17155},
+        archivePrefix={arXiv},
+        primaryClass={cs.CV},
+        url={https://arxiv.org/abs/2604.17155}, 
+      }
 }</code></pre>
   </div>
 </section>
