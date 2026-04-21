@@ -1,6 +1,8 @@
 # Instant Colorization of Gaussian Splats [CVPR'26 Findings]
 Daniel Lieber, Nils Wandel, Alexander Mock
 
+[Paper (arXiv)](https://arxiv.org/abs/2604.17155)
+
 <div style="text-align: center; padding:10px;">
   <a href="https://www.youtube.com/watch?v=2Y0fsnWYIsY"><img src="assets/icgs_gif_short.gif" width="700"></a>
 </div>
