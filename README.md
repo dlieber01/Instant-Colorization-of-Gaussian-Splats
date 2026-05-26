@@ -35,12 +35,12 @@ The datasets used in this project can be downloaded here:
 The repository contains submodules, thus please check it out with 
 ```shell
 # SSH
-git clone  --recursive
+git clone git@github.com:dlieber01/Instant-Colorization-of-Gaussian-Splats.git --recursive
 ```
 or
 ```shell
 # HTTPS
-git clone  --recursive
+git clone https://github.com/dlieber01/Instant-Colorization-of-Gaussian-Splats.git --recursive
 ```
 
 This project builds on [3D Gaussian Splatting for Real-Time Radiance Field Rendering](https://github.com/graphdeco-inria/gaussian-splatting).
